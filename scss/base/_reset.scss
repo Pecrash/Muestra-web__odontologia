@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    font-family: var(--fuente-principal);
+    
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.bold {
+    font-weight: bold;
+    color: var(--bold-text);
+}
+.regular {
+    font-weight: lighter;
+    color: var(--bold-text);
+}

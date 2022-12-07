@@ -1,0 +1,20 @@
+@use './abstracts/variables';
+
+@use './base/reset';
+
+@use './components/header';
+
+@use './abstracts/svg';
+
+
+/* *****HOME***** */
+
+@use './layout/home/secPrincipal';
+
+@use './layout/home/secConoceMas';
+
+@use './layout/home/secOdontologia';
+
+@use './layout/home/secTuSonrisa';
+
+@use './layout/home/secFooter';
