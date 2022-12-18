@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints" as *;
+
 .header {
 	display: flex;
 	position: fixed;
@@ -9,37 +11,35 @@
 	background-color: var(--verde-aqua);
 	z-index: 2;
 	&__logo {
-		height: 60%;
+		height: 35px;
 		margin-left: 12px;
 		img {
+			width: 100%;
 			height: 100%;
 		}
-	}
-	&__menu-icon {
-		height: 80%;
-		width: 40px;
-		margin-right: 12px;
-		background-image: url('../assets/bx-menu.svg');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		z-index: 1;
 	}
 	&__input {
 		display: none;
 	}
-	&__input:checked + &__menu {
-		box-shadow: -85px 0px 40px rgba(83, 83, 83, 0.4);
+	&__input:checked + &__menu-container {
 		transform: translatex(0);
 		transition: transform 0.17s linear;
 	}
 	&__input:checked ~ #cajita {
 		width: 40px;
 		height: 40px;
-		background-image: url('../assets/close-icon.svg');
+		background-image: url("../assets/close-icon.svg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+	&__menu-container {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		background-color: rgba(70, 70, 70, 0.4);
+		transform: translatex(100%);
 	}
 	&__menu {
 		display: flex;
@@ -55,11 +55,20 @@
 		list-style: none;
 		background-color: var(--gray);
 		border-radius: 20px 0px 0px 20px;
-		transform: translatex(100%);
+		&-icon {
+			height: 80%;
+			width: 40px;
+			margin-right: 12px;
+			background-image: url("../assets/bx-menu.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 1;
+		}
 		&-item {
 			text-decoration: none;
 			color: var(--blue);
-			font-size: 20px;
+			font-size: 1.25em;
 			font-weight: bold;
 			&:active {
 				filter: contrast(170%);
@@ -82,6 +91,88 @@
 			}
 			h1 {
 				color: white;
+				font-size: 1.625em;
+			}
+		}
+	}
+}
+
+
+/* *****************************
+___________TABLET_____________
+***************************** */
+
+@include media-up(tablet) {
+	.header {
+		padding: 0 12px 0 32px;
+		&__menu {
+			left: 30%;
+			position: initial;
+			&-item {
+				font-size: 2.25em;
+			}
+			&-logo {
+				h1 {
+					font-size: 2.225em;
+				}
+			}
+		}
+	}
+}
+
+
+/* *****************************
+___________DESKTOP_____________
+***************************** */
+
+@include media-up(desktop) {
+	.header {
+		height: 100px;
+		position: initial;
+		padding: 0 60px 0 80px;
+		justify-content: space-between;
+		padding: 2.8125rem;
+		&__logo {
+			height: 45px;
+			margin-left: 12px;
+		}
+		&__menu {
+			flex-direction: row;
+			justify-content: flex-end;
+			background-color: var(--verde-aqua);
+			border-radius: 0;
+			gap: 3.3rem;
+			left: 0;
+			&-container {
+				width: 70%;
+				transform: inherit;
+				position: relative;
+				background-color: transparent
+			}
+			&-icon {
+				display: none;
+			}
+			&-item {
+				font-size: .7em;
+				color: var(--bold-text);
+				text-align: center;
+				&:hover {
+					filter: brightness(1.7);
+				}
+				&#contact {
+					min-width: 160px;
+					text-align: center;
+					color: var(--blue);
+					border: 2px solid var(--blue);
+					border-radius: 25px;
+					
+				}
+			}
+			h1 {
+				font-size: 2.225em;
+			}
+			&-logo {
+				display: none;
 			}
 		}
 	}

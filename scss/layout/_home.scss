@@ -1,0 +1,398 @@
+@use "../abstracts/breakpoints" as *;
+
+/* *****************************
+___________PHONE_____________
+***************************** */
+
+.secPrincipal {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 28.75rem;
+	background-color: var(--verde-aqua);
+	margin-top: 58px;
+	background-image: url("../assets/waves.svg");
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	img {
+		opacity: 0.2;
+		position: absolute;
+		top: 2em;
+		width: 16.75rem;
+	}
+	&__tittle {
+		width: 82%;
+		max-width: 20.625rem;
+		min-width: 18.75rem;
+		padding-top: 1.625rem;
+		text-align: start;
+		z-index: 1;
+	}
+	&__parrafo {
+		width: 82%;
+		max-width: 20.625rem;
+		min-width: 18.75rem;
+		margin-top: 1.125rem;
+		z-index: 1;
+	}
+	&__btn {
+		margin-top: 2.25rem;
+		border: none;
+		width: 82%;
+		max-width: 20.625rem;
+		min-width: 18.75rem;
+		height: 2.25rem;
+		border-radius: 1.25rem;
+		background-color: var(--dark-aqua);
+		font-size: 1em;
+		font-weight: bold;
+		color: white;
+		z-index: 1;
+	}
+	&__btn:hover &__parrafo {
+		width: 50%;
+	}
+}
+
+.secConoceMas {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	background-color: var(--gray);
+	&__tittle {
+		width: 82%;
+		text-align: start;
+		max-width: 20.625rem;
+		min-width: 18.75rem;
+		margin-top: 0.75rem;
+	}
+	&__container {
+		width: 82%;
+		max-width: 20.625rem;
+		min-width: 18.75rem;
+		&-parrafo {
+			margin-top: 2rem;
+		}
+		&-hidden {
+			display: none;
+			margin-top: 1.5rem;
+		}
+	}
+	.show {
+		display: block;
+	}
+	#read.show {
+		background-image: none;
+	}
+	.leer-mas {
+		font-weight: lighter;
+		width: 82%;
+		max-width: 20.625rem;
+		min-width: 18.75rem;
+		margin-top: 0.5rem;
+		margin-bottom: 1.625rem;
+		color: var(--dark-aqua);
+		cursor: pointer;
+		&:hover {
+			filter: contrast(160%);
+		}
+		p {
+			width: 40%;
+			background-image: url("../assets/Arrow.svg");
+			background-position-x: right;
+			background-position-y: 60%;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.secOdontologia {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 2.5rem;
+	position: relative;
+	&__tittle {
+		margin: 2rem 0;
+	}
+	&__servicio {
+		text-align: center;
+		margin-top: 2.375rem;
+		h2 {
+			font-size: 1.25em;
+			margin-top: 20px;
+			color: var(--bold-text);
+		}
+		p {
+			width: 9.25rem;
+			margin: 0 auto;
+			margin-top: 1.25rem;
+			font-size: 1em;
+		}
+	}
+	.arrow-prev {
+		position: absolute;
+		width: 1.5625rem;
+		left: 12%;
+		top: 50%;
+		transform: rotate(180deg);
+		display: none;
+	}
+	.arrow-next {
+		position: absolute;
+		width: 1.5625rem;
+		right: 12%;
+		top: 50%;
+		display: none;
+	}
+}
+
+.secTuSonrisa {
+	background-color: var(--gray);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 30% 0 10% 0;
+	&__imagen {
+		width: 18.25rem;
+	}
+	&__container {
+		width: 82%;
+		max-width: 20.625rem;
+		min-width: 18.75rem;
+		text-align: start;
+		&-tittle {
+			margin-top: 1.625rem;
+		}
+		&-parrafo {
+			margin-top: 1.125rem;
+		}
+	}
+}
+
+.secFooter {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-bottom: 3.25rem;
+	color: #d9d9d9;
+	background-color: var(--bold-text);
+	&__logo {
+		width: 7.5rem;
+		margin-top: 2rem;
+	}
+	&__redes {
+		&-tittle {
+			font-size: 1.375em;
+			margin-top: 2.5rem;
+		}
+		&-iconos {
+			display: flex;
+			justify-content: space-around;
+			width: 9.375rem;
+			margin-top: 1.25rem;
+			img {
+				width: 2.0625rem;
+			}
+		}
+	}
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2.5rem;
+		font-size: 1.375em;
+		line-height: 2.5rem;
+		a {
+			text-decoration: none;
+			color: #d9d9d9;
+			&:active {
+				filter: contrast(160%);
+			}
+		}
+	}
+	&__contacto {
+		text-align: center;
+		line-height: 2rem;
+		&-tittle {
+			font-size: 1.375em;
+			margin-top: 2.5rem;
+		}
+		&-parrafo {
+			text-align: center;
+		}
+	}
+}
+
+/* *****************************
+___________TABLET_____________
+***************************** */
+
+@include media-up(tablet) {
+	html {
+		font-size: 110%;
+	}
+	.secPrincipal {
+		/* background-color: bisque; */
+		align-items: flex-start;
+		padding-left: 45px;
+		img {
+			opacity: 1;
+			right: 5%;
+			top: 3rem;
+		}
+	}
+	.secConoceMas {
+		flex-direction: row;
+		align-items: inherit;
+		justify-content: space-between;
+		padding: 0 2.8125rem 0 2.8125rem;
+		&__tittle {
+			margin-top: 2rem;
+		}
+	}
+	.secOdontologia {
+		&__servicios {
+			/* position: relative; */
+			display: flex;
+			width: 55%;
+			gap: 100px;
+			overflow: scroll;
+			scroll-behavior: smooth;
+		}
+		.arrow-prev {
+			display: block;
+		}
+		.arrow-next {
+			display: block;
+		}
+	}
+	.secTuSonrisa {
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		height: 29.375rem;
+		padding: 0 2.8125rem 0 2.8125rem;
+		img {
+			width: 14.625rem;
+		}
+	}
+	.secFooter {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px 250px;
+	}
+}
+
+/* *****************************
+___________LARGE_TABLET_____________
+***************************** */
+
+@include media-up(large_tablet) {
+	html {
+		font-size: 120%;
+	}
+}
+
+/* *****************************
+___________DESKTOP_____________
+***************************** */
+
+@include media-up(desktop) {
+	html {
+		font-size: 150%;
+	}
+	.secPrincipal {
+		padding-left: 100px;
+		margin-top: 0;
+		height: 770px;
+		img {
+			width: 20rem;
+		}
+		&__tittle {
+			margin-top: 80px;
+		}
+		&__parrafo {
+			width: 45%;
+			max-width: 36.5rem;
+			min-width: 23.625rem;
+		}
+		&__btn {
+			width: 290px;
+			max-width: inherit;
+			min-width: inherit;
+			font-size: 0.75em;
+			&:hover {
+				filter: contrast(150%);
+			}
+		}
+	}
+	.secConoceMas {
+		flex-direction: row;
+		justify-content: space-between;
+		&__container {
+			width: 50%;
+			max-width: inherit;
+			min-width: inherit;
+		}
+	}
+	.secOdontologia {
+		&__servicios {
+			/* position: relative; */
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 85%;
+			gap: 100px;
+			overflow: inherit;
+		}
+		.arrow-prev {
+			display: none;
+		}
+		.arrow-next {
+			display: none;
+		}
+	}
+	.secTuSonrisa {
+		&__container {
+			max-width: 28.625rem;
+		}
+		img {
+			width: 18.625rem;
+		}
+	}
+	.secFooter {
+		font-size: 90%;
+		gap: 90px;
+		&__redes {
+			&-tittle {
+				font-size: 1.375em;
+				margin-top: 2.5rem;
+			}
+			&-iconos {
+				img {
+					&:hover {
+						filter: contrast(200%);
+					}
+				}
+			}
+		}
+		&__nav {
+			a {
+				&:hover {
+					filter: contrast(200%);
+				}
+			}
+		}
+	}
+}

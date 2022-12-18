@@ -34,68 +34,78 @@
             <h1 class="bold">Conoce más sobre</h1>
             <h1 class="regular">Dental Clinic</h1>
         </article>
-        <p class="secConoceMas__parrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nulla incidunt
-            hic explicabo voluptate,
-            sapiente, quo numquam soluta delectus reprehenderit quod vel.
-        </p>
-        <p class="secConoceMas__hidden" id="hidden">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum recusandae ea, quisquam distinctio ad
-            quis quam velit impedit deleniti, dolores eligendi. Perferendis non error odio ipsa nulla sapiente
-            reiciendis explicabo!
-        </p>
-        <article class="leer-mas">
-            <p id="read">leer más</p>
-        </article>
+        <div class="secConoceMas__container">
+            <p class="secConoceMas__container-parrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nulla incidunt
+                hic explicabo voluptate,
+                sapiente, quo numquam soluta delectus reprehenderit quod vel.
+            </p>
+            <p class="secConoceMas__container-hidden" id="hidden">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum recusandae ea, quisquam distinctio
+                ad
+                quis quam velit impedit deleniti, dolores eligendi. Perferendis non error odio ipsa nulla sapiente
+                reiciendis explicabo!
+            </p>
+            <article class="leer-mas">
+                <p id="read">leer más</p>
+            </article>
+        </div>
     </section>
 
     <section class="secOdontologia">
         <h1 class="bold secOdontologia__tittle">Servicios Especializados</h1>
-        <article class="secOdontologia__servicio">
-            <img src="./assets/Iconos_dientes/healthy-teeth.svg" alt="">
-            <h2>Odontogía General</h2>
-            <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
-        </article>
-        <article class="secOdontologia__servicio">
-            <img src="./assets/Iconos_dientes/shiny-tooth.svg" alt="">
-            <h2>Estética Dental</h2>
-            <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
-        </article>
-        <article class="secOdontologia__servicio">
-            <img src="./assets/Iconos_dientes/braces.svg" alt="">
-            <h2>Ortodoncia</h2>
-            <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
-        </article>
-        <article class="secOdontologia__servicio">
-            <img src="./assets/Iconos_dientes/tooth-extraction.svg" alt="">
-            <h2>Cirugía Oral</h2>
-            <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
-        </article>
+        <div class="secOdontologia__servicios">
+            <img src="./assets/control_arrow.svg" class="arrow-prev" alt="">
+            <img src="./assets/control_arrow.svg" class="arrow-next" alt="">
+            <article class="secOdontologia__servicio">
+                <img src="./assets/Iconos_dientes/healthy-teeth.svg" alt="">
+                <h2>Odontogía General</h2>
+                <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
+            </article>
+            <article class="secOdontologia__servicio">
+                <img src="./assets/Iconos_dientes/shiny-tooth.svg" alt="">
+                <h2>Estética Dental</h2>
+                <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
+            </article>
+            <article class="secOdontologia__servicio">
+                <img src="./assets/Iconos_dientes/braces.svg" alt="">
+                <h2>Ortodoncia</h2>
+                <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
+            </article>
+            <article class="secOdontologia__servicio">
+                <img src="./assets/Iconos_dientes/tooth-extraction.svg" alt="">
+                <h2>Cirugía Oral</h2>
+                <p>Placeat fugit, consequatur quidem ad unde quasi voluptatibus.</p>
+            </article>
+        </div>
     </section>
 
     <section class="secTuSonrisa">
-        <img src="./assets/imagenPrincipal-2.svg" alt="">
-        <article class="secTuSonrisa__tittle">
-            <h1 class="bold">Amas tu sonrisa</h1>
-            <h1 class="regular">te ayudamos a cuidarla</h1>
-        </article>
-        <p class="secTuSonrisa__parrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam necessitatibus qui placeat aut. Fugiat,
-            quae? Consequatur debitis, ipsam quos neque eos, nihil placeat nesciunt, perferendis totam omnis doloribus
-            atque ad.
-        </p>
+        <img src="./assets/imagenPrincipal-2.svg" class="secTuSonrisa__imagen" alt="">
+        <div class="secTuSonrisa__container">
+            <article class="secTuSonrisa__container-tittle">
+                <h1 class="bold">Amas tu sonrisa</h1>
+                <h1 class="regular">te ayudamos a cuidarla</h1>
+            </article>
+            <p class="secTuSonrisa__container-parrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam necessitatibus qui placeat aut. Fugiat,
+                quae? Consequatur debitis, ipsam quos neque eos, nihil placeat nesciunt, perferendis totam omnis
+                doloribus
+                atque ad.
+            </p>
+        </div>
     </section>
 
     <footer class="secFooter">
         <img src="./assets/IconDental.png" alt="" class="secFooter__logo">
-        <h2 class="secFooter__redes-tittle">Redes Sociales</h2>
-
-        <section class="secFooter__iconos">
-            <img src="./assets/Redes/facebook.svg" alt="">
-            <img src="./assets/Redes/instagram.svg" alt="">
-            <img src="./assets/Redes/twitter.svg" alt="">
+        <section class="secFooter__redes">
+            <h2 class="secFooter__redes-tittle">Redes Sociales</h2>
+            <section class="secFooter__redes-iconos">
+                <img src="./assets/Redes/facebook.svg" alt="">
+                <img src="./assets/Redes/instagram.svg" alt="">
+                <img src="./assets/Redes/twitter.svg" alt="">
+            </section>
         </section>
-
         <section class="secFooter__nav">
             <a href="#">Nosotros</a>
             <a href="#">Especialidades</a>
@@ -103,7 +113,6 @@
             <a href="#">Entérate</a>
             <a href="#">Contáctanos</a>
         </section>
-
         <section class="secFooter__contacto">
             <h2 class="secFooter__contacto-tittle">Contacto</h2>
             <p class="secFooter__contacto-parrafo">
@@ -111,7 +120,6 @@
                 +57 3044376024
             </p>
         </section>
-
     </footer>
     <script src="./src/index.js"></script>
 </body>

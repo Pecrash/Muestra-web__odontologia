@@ -2,19 +2,14 @@
 
 @use './base/reset';
 
-@use './components/header';
 
-@use './abstracts/svg';
+/* *****COMPONENTS***** */
+
+@use './components/header';
 
 
 /* *****HOME***** */
 
-@use './layout/home/secPrincipal';
+@use './layout/home';
 
-@use './layout/home/secConoceMas';
 
-@use './layout/home/secOdontologia';
-
-@use './layout/home/secTuSonrisa';
-
-@use './layout/home/secFooter';

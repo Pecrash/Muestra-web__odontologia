@@ -21,11 +21,11 @@ html body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.125em;
 }
 
 .bold {
@@ -50,27 +50,17 @@ p {
   z-index: 2;
 }
 .header__logo {
-  height: 60%;
+  height: 35px;
   margin-left: 12px;
 }
 .header__logo img {
+  width: 100%;
   height: 100%;
-}
-.header__menu-icon {
-  height: 80%;
-  width: 40px;
-  margin-right: 12px;
-  background-image: url("../assets/bx-menu.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
 }
 .header__input {
   display: none;
 }
-.header__input:checked + .header__menu {
-  box-shadow: -85px 0px 40px rgba(83, 83, 83, 0.4);
+.header__input:checked + .header__menu-container {
   transform: translatex(0);
   transition: transform 0.17s linear;
 }
@@ -81,6 +71,14 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.header__menu-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(70, 70, 70, 0.4);
+  transform: translatex(100%);
 }
 .header__menu {
   display: flex;
@@ -96,12 +94,21 @@ p {
   list-style: none;
   background-color: var(--gray);
   border-radius: 20px 0px 0px 20px;
-  transform: translatex(100%);
+}
+.header__menu-icon {
+  height: 80%;
+  width: 40px;
+  margin-right: 12px;
+  background-image: url("../assets/bx-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
 }
 .header__menu-item {
   text-decoration: none;
   color: var(--blue);
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: bold;
 }
 .header__menu-item:active {
@@ -125,21 +132,91 @@ p {
 }
 .header__menu-logo h1 {
   color: white;
+  font-size: 1.625em;
 }
 
-.mysvg {
-  fill: var(--dark-aqua);
-  height: 100%;
-  width: 100%;
+/* *****************************
+___________TABLET_____________
+***************************** */
+@media screen and (min-width: 720px) {
+  .header {
+    padding: 0 12px 0 32px;
+  }
+  .header__menu {
+    left: 30%;
+    position: initial;
+  }
+  .header__menu-item {
+    font-size: 2.25em;
+  }
+  .header__menu-logo h1 {
+    font-size: 2.225em;
+  }
 }
-
+/* *****************************
+___________DESKTOP_____________
+***************************** */
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 100px;
+    position: initial;
+    padding: 0 60px 0 80px;
+    justify-content: space-between;
+    padding: 2.8125rem;
+  }
+  .header__logo {
+    height: 45px;
+    margin-left: 12px;
+  }
+  .header__menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: var(--verde-aqua);
+    border-radius: 0;
+    gap: 3.3rem;
+    left: 0;
+  }
+  .header__menu-container {
+    width: 70%;
+    transform: inherit;
+    position: relative;
+    background-color: transparent;
+  }
+  .header__menu-icon {
+    display: none;
+  }
+  .header__menu-item {
+    font-size: 0.7em;
+    color: var(--bold-text);
+    text-align: center;
+  }
+  .header__menu-item:hover {
+    filter: brightness(1.7);
+  }
+  .header__menu-item#contact {
+    min-width: 160px;
+    text-align: center;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    border-radius: 25px;
+  }
+  .header__menu h1 {
+    font-size: 2.225em;
+  }
+  .header__menu-logo {
+    display: none;
+  }
+}
+/* *****************************
+___________PHONE_____________
+***************************** */
 .secPrincipal {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 460px;
+  height: 28.75rem;
   background-color: var(--verde-aqua);
   margin-top: 58px;
   background-image: url("../assets/waves.svg");
@@ -150,34 +227,34 @@ p {
 .secPrincipal img {
   opacity: 0.2;
   position: absolute;
-  top: 30px;
+  top: 2em;
+  width: 16.75rem;
 }
 .secPrincipal__tittle {
   width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  padding-top: 25px;
+  max-width: 20.625rem;
+  min-width: 18.75rem;
+  padding-top: 1.625rem;
   text-align: start;
   z-index: 1;
 }
 .secPrincipal__parrafo {
   width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  margin: 0 auto;
-  margin-top: 18px;
+  max-width: 20.625rem;
+  min-width: 18.75rem;
+  margin-top: 1.125rem;
   z-index: 1;
 }
 .secPrincipal__btn {
-  margin-top: 40px;
+  margin-top: 2.25rem;
   border: none;
   width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  height: 40px;
-  border-radius: 20px;
+  max-width: 20.625rem;
+  min-width: 18.75rem;
+  height: 2.25rem;
+  border-radius: 1.25rem;
   background-color: var(--dark-aqua);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
   color: white;
   z-index: 1;
@@ -196,24 +273,22 @@ p {
 }
 .secConoceMas__tittle {
   width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  margin-top: 12px;
+  text-align: start;
+  max-width: 20.625rem;
+  min-width: 18.75rem;
+  margin-top: 0.75rem;
 }
-.secConoceMas__parrafo {
+.secConoceMas__container {
   width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  margin: 0 auto;
-  margin-top: 30px;
+  max-width: 20.625rem;
+  min-width: 18.75rem;
 }
-.secConoceMas__hidden {
+.secConoceMas__container-parrafo {
+  margin-top: 2rem;
+}
+.secConoceMas__container-hidden {
   display: none;
-  width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 1.5rem;
 }
 .secConoceMas .show {
   display: block;
@@ -224,11 +299,15 @@ p {
 .secConoceMas .leer-mas {
   font-weight: lighter;
   width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  margin-top: 7px;
-  margin-bottom: 25px;
+  max-width: 20.625rem;
+  min-width: 18.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.625rem;
   color: var(--dark-aqua);
+  cursor: pointer;
+}
+.secConoceMas .leer-mas:hover {
+  filter: contrast(160%);
 }
 .secConoceMas .leer-mas p {
   width: 40%;
@@ -242,22 +321,41 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
+  position: relative;
 }
 .secOdontologia__tittle {
-  margin: 30px 0;
+  margin: 2rem 0;
 }
 .secOdontologia__servicio {
   text-align: center;
-  margin-top: 37px;
+  margin-top: 2.375rem;
 }
 .secOdontologia__servicio h2 {
+  font-size: 1.25em;
   margin-top: 20px;
+  color: var(--bold-text);
 }
 .secOdontologia__servicio p {
-  width: 148px;
+  width: 9.25rem;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 1.25rem;
+  font-size: 1em;
+}
+.secOdontologia .arrow-prev {
+  position: absolute;
+  width: 1.5625rem;
+  left: 12%;
+  top: 50%;
+  transform: rotate(180deg);
+  display: none;
+}
+.secOdontologia .arrow-next {
+  position: absolute;
+  width: 1.5625rem;
+  right: 12%;
+  top: 50%;
+  display: none;
 }
 
 .secTuSonrisa {
@@ -268,19 +366,20 @@ p {
   width: 100%;
   padding: 30% 0 10% 0;
 }
-.secTuSonrisa__tittle {
+.secTuSonrisa__imagen {
+  width: 18.25rem;
+}
+.secTuSonrisa__container {
   width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  margin-top: 25px;
+  max-width: 20.625rem;
+  min-width: 18.75rem;
   text-align: start;
 }
-.secTuSonrisa__parrafo {
-  width: 82%;
-  max-width: 330px;
-  min-width: 300px;
-  margin: 0 auto;
-  margin-top: 18px;
+.secTuSonrisa__container-tittle {
+  margin-top: 1.625rem;
+}
+.secTuSonrisa__container-parrafo {
+  margin-top: 1.125rem;
 }
 
 .secFooter {
@@ -290,52 +389,197 @@ p {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 52px;
-  color: #D9D9D9;
+  padding-bottom: 3.25rem;
+  color: #d9d9d9;
   background-color: var(--bold-text);
 }
 .secFooter__logo {
-  width: 120px;
-  margin-top: 30px;
+  width: 7.5rem;
+  margin-top: 2rem;
 }
 .secFooter__redes-tittle {
-  font-size: 22px;
-  margin-top: 40px;
+  font-size: 1.375em;
+  margin-top: 2.5rem;
 }
-.secFooter__iconos {
+.secFooter__redes-iconos {
   display: flex;
   justify-content: space-around;
-  width: 150px;
-  margin-top: 20px;
+  width: 9.375rem;
+  margin-top: 1.25rem;
+}
+.secFooter__redes-iconos img {
+  width: 2.0625rem;
 }
 .secFooter__nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
-  font-size: 22px;
-  line-height: 40px;
+  margin-top: 2.5rem;
+  font-size: 1.375em;
+  line-height: 2.5rem;
 }
 .secFooter__nav a {
   text-decoration: none;
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
 .secFooter__nav a:active {
   filter: contrast(160%);
 }
 .secFooter__contacto {
   text-align: center;
-  line-height: 32px;
+  line-height: 2rem;
 }
 .secFooter__contacto-tittle {
-  font-size: 22px;
-  margin-top: 40px;
+  font-size: 1.375em;
+  margin-top: 2.5rem;
 }
 .secFooter__contacto-parrafo {
   text-align: center;
 }
 
+/* *****************************
+___________TABLET_____________
+***************************** */
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 110%;
+  }
+  .secPrincipal {
+    /* background-color: bisque; */
+    align-items: flex-start;
+    padding-left: 45px;
+  }
+  .secPrincipal img {
+    opacity: 1;
+    right: 5%;
+    top: 3rem;
+  }
+  .secConoceMas {
+    flex-direction: row;
+    align-items: inherit;
+    justify-content: space-between;
+    padding: 0 2.8125rem 0 2.8125rem;
+  }
+  .secConoceMas__tittle {
+    margin-top: 2rem;
+  }
+  .secOdontologia__servicios {
+    /* position: relative; */
+    display: flex;
+    width: 55%;
+    gap: 100px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+  }
+  .secOdontologia .arrow-prev {
+    display: block;
+  }
+  .secOdontologia .arrow-next {
+    display: block;
+  }
+  .secTuSonrisa {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    height: 29.375rem;
+    padding: 0 2.8125rem 0 2.8125rem;
+  }
+  .secTuSonrisa img {
+    width: 14.625rem;
+  }
+  .secFooter {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 250px;
+  }
+}
+/* *****************************
+___________LARGE_TABLET_____________
+***************************** */
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 120%;
+  }
+}
+/* *****************************
+___________DESKTOP_____________
+***************************** */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 150%;
+  }
+  .secPrincipal {
+    padding-left: 100px;
+    margin-top: 0;
+    height: 770px;
+  }
+  .secPrincipal img {
+    width: 20rem;
+  }
+  .secPrincipal__tittle {
+    margin-top: 80px;
+  }
+  .secPrincipal__parrafo {
+    width: 45%;
+    max-width: 36.5rem;
+    min-width: 23.625rem;
+  }
+  .secPrincipal__btn {
+    width: 290px;
+    max-width: inherit;
+    min-width: inherit;
+    font-size: 0.75em;
+  }
+  .secPrincipal__btn:hover {
+    filter: contrast(150%);
+  }
+  .secConoceMas {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .secConoceMas__container {
+    width: 50%;
+    max-width: inherit;
+    min-width: inherit;
+  }
+  .secOdontologia__servicios {
+    /* position: relative; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 85%;
+    gap: 100px;
+    overflow: inherit;
+  }
+  .secOdontologia .arrow-prev {
+    display: none;
+  }
+  .secOdontologia .arrow-next {
+    display: none;
+  }
+  .secTuSonrisa__container {
+    max-width: 28.625rem;
+  }
+  .secTuSonrisa img {
+    width: 18.625rem;
+  }
+  .secFooter {
+    font-size: 90%;
+    gap: 90px;
+  }
+  .secFooter__redes-tittle {
+    font-size: 1.375em;
+    margin-top: 2.5rem;
+  }
+  .secFooter__redes-iconos img:hover {
+    filter: contrast(200%);
+  }
+  .secFooter__nav a:hover {
+    filter: contrast(200%);
+  }
+}
+/* *****COMPONENTS***** */
 /* *****HOME***** */
 
 /*# sourceMappingURL=main.css.map */
