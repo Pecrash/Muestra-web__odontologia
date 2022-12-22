@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
     <header class="header">
-        <a href="#" class="header__logo"><img src="../assets/IconDental.png" alt=""></a>
+        <a href="../index.php" class="header__logo"><img src="../assets/IconDental.png" alt=""></a>
         <input type="checkbox" id="menu" class="header__input">
         <label class="header__menu-container" for="menu">
             <ul class="header__menu">
@@ -18,15 +19,12 @@
                     <h1 class="regular">Clinic</h1>
                     <img src="../assets/waves-menu.svg" alt="">
                 </article>
-                <a href="#" class="header__menu-item">Nosotros</a>
-                <a href="#" class="header__menu-item">Especialidades</a>
-                <a href="#" class="header__menu-item">Nuestro Equipo</a>
-                <a href="#" class="header__menu-item">Entérate</a>
-                <a href="#" class="header__menu-item" id="contact">Contáctanos</a>
+                <a href="../index.php" class="header__menu-item">Nosotros</a>
+                <a href="../layout/formulario.php" class="header__menu-item">Especialidades</a>
+                <a href="../layout/formulario.php" class="header__menu-item">Nuestro Equipo</a>
+                <a href="../layout/formulario.php" class="header__menu-item">Entérate</a>
+                <a href="../layout/formulario.php" class="header__menu-item" id="contact">Contáctanos</a>
             </ul>
         </label>
         <label class="header__menu-icon" id="cajita" for="menu"></label>
     </header>
-</body>
-
-</html>

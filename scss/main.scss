@@ -7,9 +7,16 @@
 
 @use './components/header';
 
+@use './components/footer';
+
 
 /* *****HOME***** */
 
 @use './layout/home';
+
+
+/* *****FORM***** */
+
+@use './layout/form'
 
 

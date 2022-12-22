@@ -1,98 +1,100 @@
 @use "../abstracts/breakpoints" as *;
 
-.header {
-	display: flex;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 55px;
-	align-items: center;
-	justify-content: space-between;
-	background-color: var(--verde-aqua);
-	z-index: 2;
-	&__logo {
-		height: 35px;
-		margin-left: 12px;
-		img {
-			width: 100%;
-			height: 100%;
-		}
-	}
-	&__input {
-		display: none;
-	}
-	&__input:checked + &__menu-container {
-		transform: translatex(0);
-		transition: transform 0.17s linear;
-	}
-	&__input:checked ~ #cajita {
-		width: 40px;
-		height: 40px;
-		background-image: url("../assets/close-icon.svg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-	&__menu-container {
-		width: 100%;
-		height: 100%;
-		left: 0;
-		position: fixed;
-		top: 0;
-		background-color: rgba(70, 70, 70, 0.4);
-		transform: translatex(100%);
-	}
-	&__menu {
+@include media-up(phone) {
+	.header {
 		display: flex;
-		flex-direction: column;
 		position: fixed;
-		align-items: center;
-		justify-content: center;
-		left: 70px;
-		height: 100%;
 		top: 0;
-		right: 0;
-		gap: 7%;
-		list-style: none;
-		background-color: var(--gray);
-		border-radius: 20px 0px 0px 20px;
-		&-icon {
-			height: 80%;
+		width: 100%;
+		height: 55px;
+		align-items: center;
+		justify-content: space-between;
+		background-color: var(--verde-aqua);
+		z-index: 2;
+		&__logo {
+			height: 35px;
+			margin-left: 12px;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&__input {
+			display: none;
+		}
+		&__input:checked + &__menu-container {
+			transform: translatex(0);
+			transition: transform 0.17s linear;
+		}
+		&__input:checked ~ #cajita {
 			width: 40px;
-			margin-right: 12px;
-			background-image: url("../assets/bx-menu.svg");
+			height: 40px;
+			background-image: url("../assets/close-icon.svg");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			z-index: 1;
 		}
-		&-item {
-			text-decoration: none;
-			color: var(--blue);
-			font-size: 1.25em;
-			font-weight: bold;
-			&:active {
-				filter: contrast(170%);
-			}
+		&__menu-container {
+			width: 100%;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			top: 0;
+			background-color: rgba(70, 70, 70, 0.4);
+			transform: translatex(100%);
 		}
-		&-logo {
-			position: absolute;
+		&__menu {
 			display: flex;
 			flex-direction: column;
+			position: fixed;
 			align-items: center;
-			width: 100%;
-			height: 20%;
-			padding-top: 7%;
-			border-radius: 20px 0 0 0;
+			justify-content: center;
+			left: 70px;
+			height: 100%;
 			top: 0;
-			background-color: var(--dark-aqua);
-			img {
-				position: absolute;
-				bottom: -2px;
+			right: 0;
+			gap: 7%;
+			list-style: none;
+			background-color: var(--gray);
+			border-radius: 20px 0px 0px 20px;
+			&-icon {
+				height: 80%;
+				width: 40px;
+				margin-right: 12px;
+				background-image: url("../assets/bx-menu.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				z-index: 1;
 			}
-			h1 {
-				color: white;
-				font-size: 1.625em;
+			&-item {
+				text-decoration: none;
+				color: var(--blue);
+				font-size: 1.25em;
+				font-weight: bold;
+				&:active {
+					filter: contrast(170%);
+				}
+			}
+			&-logo {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				height: 23%;
+				padding-top: 25px;
+				border-radius: 20px 0 0 0;
+				top: 0;
+				background-color: var(--dark-aqua);
+				img {
+					position: absolute;
+					bottom: -2px;
+				}
+				h1 {
+					color: white;
+					font-size: 1.625em;
+				}
 			}
 		}
 	}
@@ -107,14 +109,14 @@ ___________TABLET_____________
 	.header {
 		padding: 0 12px 0 32px;
 		&__menu {
-			left: 30%;
+			left: 52%;
 			&-item {
-				font-size: 2.25em;
+				font-size: 1.8em;
 			}
 			&-logo {
 				padding-top: 15px;
 				h1 {
-					font-size: 2.225em;
+					font-size: 1.8em;
 				}
 			}
 		}
@@ -132,7 +134,7 @@ ___________DESKTOP_____________
 		position: initial;
 		padding: 0 60px 0 80px;
 		justify-content: space-between;
-		padding: 2.8125rem;
+		/* padding: 2.8125rem; */
 		&__logo {
 			height: 45px;
 			margin-left: 12px;
@@ -162,8 +164,11 @@ ___________DESKTOP_____________
 					filter: brightness(1.7);
 				}
 				&#contact {
+					display: flex;
+					justify-content: center;
+					align-items: center;
 					min-width: 160px;
-					text-align: center;
+					height: 25px;
 					color: var(--blue);
 					border: 2px solid var(--blue);
 					border-radius: 25px;

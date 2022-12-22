@@ -1,0 +1,108 @@
+@use "../abstracts/breakpoints" as *;
+
+/* *****************************
+___________PHONE_____________
+***************************** */
+
+.secFooter {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-bottom: 3.25rem;
+	color: #d9d9d9;
+	background-color: var(--bold-text);
+	&__logo {
+		width: 7.5rem;
+		margin-top: 2rem;
+	}
+	&__redes {
+		&-tittle {
+			font-size: 1.375em;
+			margin-top: 2.5rem;
+		}
+		&-iconos {
+			display: flex;
+			justify-content: space-around;
+			width: 9.375rem;
+			margin-top: 1.25rem;
+			img {
+				width: 2.0625rem;
+			}
+		}
+	}
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2.5rem;
+		font-size: 1.375em;
+		line-height: 2.5rem;
+		a {
+			text-decoration: none;
+			color: #d9d9d9;
+			&:active {
+				filter: contrast(160%);
+			}
+		}
+	}
+	&__contacto {
+		text-align: center;
+		line-height: 2rem;
+		&-tittle {
+			font-size: 1.375em;
+			margin-top: 2.5rem;
+		}
+		&-parrafo {
+			text-align: center;
+		}
+	}
+}
+
+
+/* *****************************
+___________TABLET_____________
+***************************** */
+
+@include media-up(tablet) {
+    .secFooter {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px 250px;
+	}
+}
+
+
+/* *****************************
+___________DESKTOP_____________
+***************************** */
+
+@include media-up(desktop) {
+    .secFooter {
+		font-size: 90%;
+		gap: 90px;
+		&__redes {
+			&-tittle {
+				font-size: 1.375em;
+				margin-top: 2.5rem;
+			}
+			&-iconos {
+				img {
+					&:hover {
+						filter: contrast(200%);
+					}
+				}
+			}
+		}
+		&__nav {
+			a {
+				&:hover {
+					filter: contrast(200%);
+				}
+			}
+		}
+	}
+}

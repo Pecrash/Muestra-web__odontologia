@@ -4,235 +4,180 @@
 ___________PHONE_____________
 ***************************** */
 
-.secPrincipal {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	height: 28.75rem;
-	background-color: var(--verde-aqua);
-	margin-top: 58px;
-	background-image: url("../assets/waves.svg");
-	background-position: bottom;
-	background-repeat: no-repeat;
-	background-size: contain;
-	img {
-		opacity: 0.2;
-		position: absolute;
-		top: 2em;
-		width: 16.75rem;
-	}
-	&__tittle {
-		width: 82%;
-		max-width: 20.625rem;
-		min-width: 18.75rem;
-		padding-top: 1.625rem;
-		text-align: start;
-		z-index: 1;
-	}
-	&__parrafo {
-		width: 82%;
-		max-width: 20.625rem;
-		min-width: 18.75rem;
-		margin-top: 1.125rem;
-		z-index: 1;
-	}
-	&__btn {
-		margin-top: 2.25rem;
-		border: none;
-		width: 82%;
-		max-width: 20.625rem;
-		min-width: 18.75rem;
-		height: 2.25rem;
-		border-radius: 1.25rem;
-		background-color: var(--dark-aqua);
-		font-size: 1em;
-		font-weight: bold;
-		color: white;
-		z-index: 1;
-	}
-	&__btn:hover &__parrafo {
-		width: 50%;
-	}
-}
-
-.secConoceMas {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	height: auto;
-	background-color: var(--gray);
-	&__tittle {
-		width: 82%;
-		text-align: start;
-		max-width: 20.625rem;
-		min-width: 18.75rem;
-		margin-top: 0.75rem;
-	}
-	&__container {
-		width: 82%;
-		max-width: 20.625rem;
-		min-width: 18.75rem;
-		&-parrafo {
-			margin-top: 2rem;
-		}
-		&-hidden {
-			display: none;
-			margin-top: 1.5rem;
-		}
-	}
-	.show {
-		display: block;
-	}
-	#read.show {
-		background-image: none;
-	}
-	.leer-mas {
-		font-weight: lighter;
-		width: 82%;
-		max-width: 20.625rem;
-		min-width: 18.75rem;
-		margin-top: 0.5rem;
-		margin-bottom: 1.625rem;
-		color: var(--dark-aqua);
-		cursor: pointer;
-		&:hover {
-			filter: contrast(160%);
-		}
-		p {
-			width: 40%;
-			background-image: url("../assets/Arrow.svg");
-			background-position-x: right;
-			background-position-y: 60%;
-			background-repeat: no-repeat;
-		}
-	}
-}
-
-.secOdontologia {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 2.5rem;
-	position: relative;
-	&__tittle {
-		margin: 2rem 0;
-	}
-	&__servicio {
-		text-align: center;
-		margin-top: 2.375rem;
-		h2 {
-			font-size: 1.25em;
-			margin-top: 20px;
-			color: var(--bold-text);
-		}
-		p {
-			width: 9.25rem;
-			margin: 0 auto;
-			margin-top: 1.25rem;
-			font-size: 1em;
-		}
-	}
-	.arrow-prev {
-		position: absolute;
-		width: 1.5625rem;
-		left: 12%;
-		top: 50%;
-		transform: rotate(180deg);
-		display: none;
-	}
-	.arrow-next {
-		position: absolute;
-		width: 1.5625rem;
-		right: 12%;
-		top: 50%;
-		display: none;
-	}
-}
-
-.secTuSonrisa {
-	background-color: var(--gray);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	padding: 30% 0 10% 0;
-	&__imagen {
-		width: 18.25rem;
-	}
-	&__container {
-		width: 82%;
-		max-width: 20.625rem;
-		min-width: 18.75rem;
-		text-align: start;
-		&-tittle {
-			margin-top: 1.625rem;
-		}
-		&-parrafo {
-			margin-top: 1.125rem;
-		}
-	}
-}
-
-.secFooter {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding-bottom: 3.25rem;
-	color: #d9d9d9;
-	background-color: var(--bold-text);
-	&__logo {
-		width: 7.5rem;
-		margin-top: 2rem;
-	}
-	&__redes {
-		&-tittle {
-			font-size: 1.375em;
-			margin-top: 2.5rem;
-		}
-		&-iconos {
-			display: flex;
-			justify-content: space-around;
-			width: 9.375rem;
-			margin-top: 1.25rem;
-			img {
-				width: 2.0625rem;
-			}
-		}
-	}
-	&__nav {
+@include media-up(phone) {
+	.secPrincipal {
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		margin-top: 2.5rem;
-		font-size: 1.375em;
-		line-height: 2.5rem;
-		a {
-			text-decoration: none;
-			color: #d9d9d9;
-			&:active {
+		width: 100%;
+		height: 28.75rem;
+		background-color: var(--verde-aqua);
+		margin-top: 58px;
+		background-image: url("../assets/waves.svg");
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: contain;
+		img {
+			opacity: 0.2;
+			position: absolute;
+			top: 2em;
+			width: 16.75rem;
+		}
+		&__tittle {
+			width: 82%;
+			max-width: 20.625rem;
+			min-width: 18.75rem;
+			padding-top: 1.625rem;
+			text-align: start;
+			z-index: 1;
+		}
+		&__parrafo {
+			width: 82%;
+			max-width: 20.625rem;
+			min-width: 18.75rem;
+			margin-top: 1.125rem;
+			z-index: 1;
+		}
+		&__btn {
+			margin-top: 2.25rem;
+			border: none;
+			width: 82%;
+			max-width: 20.625rem;
+			min-width: 18.75rem;
+			height: 2.25rem;
+			border-radius: 1.25rem;
+			background-color: var(--dark-aqua);
+			font-size: 1em;
+			font-weight: bold;
+			color: white;
+			z-index: 1;
+		}
+		&__btn:hover &__parrafo {
+			width: 50%;
+		}
+	}
+	
+	.secConoceMas {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: auto;
+		background-color: var(--gray);
+		&__tittle {
+			width: 82%;
+			text-align: start;
+			max-width: 20.625rem;
+			min-width: 18.75rem;
+			margin-top: 0.75rem;
+		}
+		&__container {
+			width: 82%;
+			max-width: 20.625rem;
+			min-width: 18.75rem;
+			&-parrafo {
+				margin-top: 2rem;
+			}
+			&-hidden {
+				display: none;
+				margin-top: 1.5rem;
+			}
+		}
+		.show {
+			display: block;
+		}
+		#read.show {
+			background-image: none;
+		}
+		.leer-mas {
+			font-weight: lighter;
+			width: 82%;
+			max-width: 20.625rem;
+			min-width: 18.75rem;
+			margin-top: 0.5rem;
+			margin-bottom: 1.625rem;
+			color: var(--dark-aqua);
+			cursor: pointer;
+			&:hover {
 				filter: contrast(160%);
+			}
+			p {
+				width: 40%;
+				background-image: url("../assets/Arrow.svg");
+				background-position-x: right;
+				background-position-y: 60%;
+				background-repeat: no-repeat;
 			}
 		}
 	}
-	&__contacto {
-		text-align: center;
-		line-height: 2rem;
-		&-tittle {
-			font-size: 1.375em;
-			margin-top: 2.5rem;
+	
+	.secOdontologia {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 2.5rem;
+		position: relative;
+		&__tittle {
+			margin: 2rem 0;
 		}
-		&-parrafo {
+		&__servicio {
 			text-align: center;
+			margin-top: 2.375rem;
+			h2 {
+				font-size: 1.25em;
+				margin-top: 20px;
+				color: var(--bold-text);
+			}
+			p {
+				width: 9.25rem;
+				margin: 0 auto;
+				margin-top: 1.25rem;
+				font-size: 1em;
+			}
+		}
+		.arrow-prev {
+			position: absolute;
+			width: 1.5625rem;
+			left: 12%;
+			top: 50%;
+			transform: rotate(180deg);
+			display: none;
+		}
+		.arrow-next {
+			position: absolute;
+			width: 1.5625rem;
+			right: 12%;
+			top: 50%;
+			display: none;
+		}
+	}
+	
+	.secTuSonrisa {
+		background-color: var(--gray);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 30% 0 10% 0;
+		&__imagen {
+			width: 18.25rem;
+		}
+		&__container {
+			width: 82%;
+			max-width: 20.625rem;
+			min-width: 18.75rem;
+			text-align: start;
+			&-tittle {
+				margin-top: 1.625rem;
+			}
+			&-parrafo {
+				margin-top: 1.125rem;
+			}
 		}
 	}
 }
+
 
 /* *****************************
 ___________TABLET_____________
@@ -287,11 +232,6 @@ ___________TABLET_____________
 			width: 14.625rem;
 		}
 	}
-	.secFooter {
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: 20px 250px;
-	}
 }
 
 /* *****************************
@@ -310,17 +250,17 @@ ___________DESKTOP_____________
 
 @include media-up(desktop) {
 	html {
-		font-size: 150%;
+		font-size: 130%;
 	}
 	.secPrincipal {
 		padding-left: 100px;
 		margin-top: 0;
 		height: 770px;
 		img {
-			width: 20rem;
+			width: 27rem;
 		}
 		&__tittle {
-			margin-top: 80px;
+			margin-top: 150px;
 		}
 		&__parrafo {
 			width: 45%;
@@ -365,34 +305,10 @@ ___________DESKTOP_____________
 	}
 	.secTuSonrisa {
 		&__container {
-			max-width: 28.625rem;
+			max-width: 33.625rem;
 		}
 		img {
-			width: 18.625rem;
-		}
-	}
-	.secFooter {
-		font-size: 90%;
-		gap: 90px;
-		&__redes {
-			&-tittle {
-				font-size: 1.375em;
-				margin-top: 2.5rem;
-			}
-			&-iconos {
-				img {
-					&:hover {
-						filter: contrast(200%);
-					}
-				}
-			}
-		}
-		&__nav {
-			a {
-				&:hover {
-					filter: contrast(200%);
-				}
-			}
+			width: 22.625rem;
 		}
 	}
 }
