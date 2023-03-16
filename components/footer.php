@@ -3,13 +3,13 @@
     <section class="secFooter__redes">
         <h2 class="secFooter__redes-tittle">Redes Sociales</h2>
         <section class="secFooter__redes-iconos">
-            <a href="https://www.facebook.com/profile.php?id=100090796002084">
+            <a href="https://www.facebook.com/profile.php?id=100090796002084" target="_blank">
                 <img src="../assets/Redes/facebook.svg" alt="">
             </a>
-            <a href="https://www.instagram.com/pecrash_dev/?igshid=YmMyMTA2M2Y%3D">
+            <a href="https://www.instagram.com/pecrash_dev/?igshid=YmMyMTA2M2Y%3D" target="_blank">
                 <img src="../assets/Redes/instagram.svg" alt="">
             </a>
-            <a href="">
+            <a href="https://twitter.com/PecrashDev" target="_blank">
                 <img src="../assets/Redes/twitter.svg" alt="">
             </a>
         </section>
